@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Iveboard {% block title%} {% endblock %}</title>
-  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/images/logos/favicon.png')}}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.min.css')}}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/images/logos/favicon.png')}}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.min.css')}}" />
 </head>
 
 <body>
@@ -20,8 +20,8 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
-            <img src="{{ url_for('static', filename='assets/images/logos/dark-logo.svg')}}" width="180" alt="" />
+          <a href="{{ url_for('home_bp.homepage')}}" class="text-nowrap logo-img">
+            <img src="{{ url_for('static', filename='assets/images/logos/logo_pi.png')}}" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -55,19 +55,19 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url_for('virtual_bp.virtualpage')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{ url_for('physic_bp.physicpage')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-alert-circle"></i>
                 </span>
-                <span class="hide-menu">Virtual interface data</span>
+                <span class="hide-menu">Physical interface data</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{ url_for('physic_bp.physicpage')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{ url_for('virtual_bp.virtualpage')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-cards"></i>
                 </span>
-                <span class="hide-menu">Physical interface data</span>
+                <span class="hide-menu">Virtual interface data</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -94,6 +94,14 @@
                   <span class="hide-menu">User guide</span>
                 </a>
             </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="https://app.databox.com/datawall/0308c45db301fe50c98853a55e1ca6031100968645abd04" aria-expanded="false">
+                <span>
+                  <i class="ti ti-file-description"></i>
+                </span>
+                <span class="hide-menu">More details</span>
+              </a>
+          </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->
@@ -121,7 +129,6 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="https://adminmart.com/product/modernize-free-bootstrap-admin-dashboard/" target="_blank" class="btn btn-primary">Download Free</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -162,6 +169,10 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
   <script src="{{ url_for('static', filename='assets/libs/jquery/dist/jquery.min.js')}}"></script>
   <script src="{{ url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{ url_for('static', filename='assets/js/sidebarmenu.js')}}"></script>
@@ -169,9 +180,6 @@
   <script src="{{ url_for('static', filename='assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
   <script src="{{ url_for('static', filename='assets/libs/simplebar/dist/simplebar.js')}}"></script>
   <script src="{{ url_for('static', filename='assets/js/dashboard.js')}}"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
   {% block script %} {% endblock %}
 </body>
 

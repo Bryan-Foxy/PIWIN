@@ -7,6 +7,7 @@
   <title>Modernize Free</title>
   <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.min.css')}}" />
+  <script src="{{ url_for('static', filename='assets/js/yosra.js')}}"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="{{ url_for('static', filename='assets/images/logos/dark-logo.svg')}}" width="180" alt="">
+                  <img src="{{ url_for('static', filename='assets/images/logos/logo_pi.png')}}" width="180" alt="">
                 </a>
                 <p class="text-center">Your Social Campaigns</p>
                 <form>
@@ -44,7 +45,7 @@
                   </div>
                   <a href="{{ url_for('home_bp.homepage')}}" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</a>
                   <div class="d-flex align-items-center justify-content-center">
-                    <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
+                    <p class="fs-4 mb-0 fw-bold">New IVE</p>
                     <a class="text-primary fw-bold ms-2" href="{{ url_for('auth_bp.registerpage')}}">Create an account</a>
                   </div>
                 </form>

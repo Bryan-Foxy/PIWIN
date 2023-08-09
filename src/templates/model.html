@@ -3,8 +3,49 @@
 {% block content %}
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
-      <p class="mb-0">This is a sample page </p>
+      <h5 class="card-title fw-semibold mb-4">IVE AI</h5>
+      <div class="container mt-3">
+        <h5>Dictionnary of state:</h5>
+        <strong>ixnetwork-traffic-start:</strong> 0<br>
+        <strong>node-down:</strong> 1<br>
+        <strong>node-up:</strong> 2<br>
+        <strong>interface-down:</strong> 3<br>
+        <strong>interface-up:</strong> 4<br>
+        <strong>tap-loss-start:</strong> 5<br>
+        <strong>tap-loss-stop:></strong> 6<br>
+        <strong>tap-delay-start:</strong> 7<br>
+        <strong>tap-delay-stop:</strong> 8<br>
+        <strong>ixnetwork-bgp-injection-start:</strong> 9<br>
+        <strong>ixnetwork-bgp-injection-stop:</strong> 10<br>
+        <strong>ixnetwork-bgp-hijacking-start:</strong> 11<br>
+        <strong>ixnetwork-bgp-hijacking-stop:</strong> 12<br>
+        <hr>
+      <form method="post" enctype=multipart/form-data>
+        <br>
+        <p><u><strong>Select csv/xls/json file to upload:</strong></u></p>
+        <br>
+        <div class="custom-file mb-3">
+          <input type="file" class="custom-file-input" id="customFile" name="file">
+          <br>
+        </div>
+
+        <div class="mt-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      <p> {{message}}</p><br><br>
+      <h4><u>{{info0}}</u></h4>
+      <p> {{info1}} <strong>{{data}}</strong> {{info2}} </p>
+      {%if data==1 or data==3 or data==5 or data==7 or data==9 or data==11%}
+      <div class="alert alert-danger" role="alert">Problem!!!</div>
+      {%else%}
+      <div class="alert alert-success" role="alert">Good here!</div>
+      {%endif%}
+      <p> {{info3}} <strong>{{data2}}</strong> </p><br>
+      <h4><u>{{title}}</u></h4>
+      <p> {{info4}} <strong>{{data}}</p>
+      
+    </div>
     </div>
   </div>
 {% endblock %}
